@@ -189,3 +189,14 @@ persist.vendor.usb.config.extra=none
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
 wifi.interface=wlan0
+
+# Fix screen glitches
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.hwui.texture_cache_size=72 \
+ro.hwui.layer_cache_size=48 \
+ro.hwui.r_buffer_cache_size=8 \
+ro.hwui.path_cache_size=32 \
+ro.hwui.gradient_cache_size=1 \
+ro.hwui.drop_shadow_cache_size=6 \
+ro.hwui.texture_cache_flushrate=0.4 \
+sys.use_fifo_ui=1
