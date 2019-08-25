@@ -66,12 +66,10 @@ persist.debug.coresight.config=stm-events
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-debug.egl.hw=0 \
 debug.enable.sglscale=1 \
 debug.gralloc.enable_fb_ubwc=1 \
 debug.mdpcomp.logs=0 \
 debug.sf.enable_hwc_vds=1 \
-debug.sf.hw=0 \
 debug.sf.latch_unsignaled=1 \
 debug.sf.recomputecrop=0 \
 dev.pm.dyn_samplingrate=1 \
@@ -85,7 +83,6 @@ ro.sf.lcd_density=480 \
 ro.vendor.display.cabl=2 \
 sdm.debug.disable_skip_validate=1 \
 vendor.display.disable_skip_validate=1 \
-vendor.display.enable_default_color_mode=1 \
 vendor.gralloc.enable_fb_ubwc=1
 
 # DRM
@@ -200,5 +197,20 @@ ro.hwui.r_buffer_cache_size=8 \
 ro.hwui.path_cache_size=32 \
 ro.hwui.gradient_cache_size=1 \
 ro.hwui.drop_shadow_cache_size=6 \
-ro.hwui.texture_cache_flushrate=0.4 \
-sys.use_fifo_ui=1
+ro.hwui.texture_cache_flushrate=0.4
+
+# Lau's magic props
+PRODUCT_PROPERTY_OVERRIDES += \
+debug.sf.hw=1 \ 
+debug.hwui.renderer=skiagl \
+debug.cpurend.vsync=false \
+vendor.display.enable_default_color_mode=0 \ 
+debug.composition.type=c2d  \
+debug.mdpcomp.idletime=600  \
+persist.hwc.ptor.enable=true \
+debug.egl.hw=1 \
+debug.sf.disable_hwc=0 \
+debug.sf.disable_backpressure=1  \
+debug.sf.gpu_comp_tiling=1  \
+debug.performance.tuning=1 \
+video.accelerate.hw=1
