@@ -202,10 +202,10 @@ ro.hwui.texture_cache_flushrate=0.4
 
 # Lau's magic props
 PRODUCT_PROPERTY_OVERRIDES += \
-debug.sf.hw=1 \ 
+debug.sf.hw=1 \
 debug.hwui.renderer=skiagl \
 debug.cpurend.vsync=false \
-vendor.display.enable_default_color_mode=0 \ 
+vendor.display.enable_default_color_mode=0 \
 debug.composition.type=c2d  \
 debug.mdpcomp.idletime=600  \
 persist.hwc.ptor.enable=true \
@@ -215,3 +215,15 @@ debug.sf.disable_backpressure=1  \
 debug.sf.gpu_comp_tiling=1  \
 debug.performance.tuning=1 \
 video.accelerate.hw=1
+
+# Memory management tweaks
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.config.fha_enable=true \
+ro.sys.fw.bg_apps_limit=32 \
+ro.config.dha_cached_max=16 \
+ro.config.dha_empty_max=42 \
+ro.config.dha_empty_init=32 \
+ro.config.dha_lmk_scale=0.545 \
+ro.config.dha_th_rate=2.3 \
+ro.config.sdha_apps_bg_max=64 \
+ro.config.sdha_apps_bg_min=8
