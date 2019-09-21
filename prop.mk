@@ -44,7 +44,7 @@ ro.qualcomm.bt.hci_transport=smd
 PRODUCT_PROPERTY_OVERRIDES += \
 camera.display.lmax=1280x720 \
 camera.display.umax=1920x1080 \
-camera.hal1.packagelist=com.skype.raider,com.google.android.talk \
+camera.hal1.packagelist=com.whatsapp,com.facebook.katana,com.instagram.android,com.snapchat.android \
 camera.lowpower.record.enable=1 \
 media.camera.ts.monotonic=1 \
 persist.camera.gyro.disable=0 \
@@ -54,7 +54,7 @@ persist.vendor.qti.telephony.vt_cam_interface=1 \
 vidc.enc.dcvs.extra-buff-count=2 \
 persist.camera.eis.enable=1 \
 persist.camera.HAL3.enabled=1 \
-vendor.camera.hal1.packagelist=com.whatsapp
+vendor.camera.hal1.packagelist=com.whatsapp,com.facebook.katana,com.instagram.android,com.snapchat.android
 
 # Cne/Dpm
 PRODUCT_PROPERTY_OVERRIDES += \
