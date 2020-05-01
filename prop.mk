@@ -201,3 +201,61 @@ persist.vendor.usb.config.extra=none
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
 wifi.interface=wlan0
+
+# Lau's magic props
+PRODUCT_PROPERTY_OVERRIDES += \
+vendor.display.enable_default_color_mode=0 \
+debug.composition.type=c2d \
+debug.mdpcomp.idletime=600 \
+persist.hwc.ptor.enable=true \
+debug.egl.hw=1 \
+debug.sf.disable_hwc=0 \
+debug.sf.disable_backpressure=1 \
+debug.sf.gpu_comp_tiling=1 \
+debug.performance.tuning=1 \
+video.accelerate.hw=1
+
+# CAF props
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.qti.sys.fw.use_trim_settings=true \
+ro.vendor.qti.sys.fw.empty_app_percent=50 \
+ro.vendor.qti.sys.fw.trim_empty_percent=100 \
+ro.vendor.qti.sys.fw.trim_cache_percent=100 \
+ro.vendor.qti.sys.fw.trim_enable_memory=2147483648 \
+ro.hwui.texture_cache_size=72 \
+ro.hwui.layer_cache_size=48 \
+ro.hwui.r_buffer_cache_size=8 \
+ro.hwui.path_cache_size=32 \
+ro.hwui.gradient_cache_size=1 \
+ro.hwui.drop_shadow_cache_size=6 \
+ro.hwui.texture_cache_flushrate=0.4 \
+ro.hwui.text_small_cache_width=1024 \
+ro.hwui.text_small_cache_height=1024 \
+ro.hwui.text_large_cache_width=2048 \
+ro.hwui.text_large_cache_height=1024 \
+ro.cutoff_voltage_mv=3400 \
+ro.memperf.lib=libmemperf.so \
+ro.memperf.enable=false \
+persist.mm.sta.enable=0 \
+persist.fuse_sdcard=true \
+persist.console.silent.config=1
+
+# Improve touch detection
+PRODUCT_PROPERTY_OVERRIDES += \
+touch.pressure.scale=0.001 \
+persist.sys.ui.hw=1 \
+view.scroll_friction=10 \
+touch.size.calibration=diameter \
+touch.size.scale=1 \
+touch.size.bias=0 \
+touch.size.isSummed=0 \
+touch.pressure.scale=0.001 \
+touch.orientation.calibration=none \
+touch.distance.calibration=none \
+touch.distance.scale=0 \
+touch.coverage.calibration=box \
+touch.gestureMode=spots \
+MultitouchSettleInterval=1ms \
+MultitouchMinDistance=1px \
+TapInterval=1ms \
+TapSlop=1px
